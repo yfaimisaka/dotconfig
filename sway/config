@@ -31,8 +31,6 @@ hide_edge_borders vertical
 ###########################
 ### background and apps ###
 ###########################
-## Set wallpaper
-output * bg  ~/Pictures/na.jpg fill
 
 ### Auto start 
 exec        --no-startup-id fcitx5 -d
@@ -43,6 +41,12 @@ exec wlsunset -S 7:40 -s 17:30
 ## Set output
 # you can get the names of your outputs by running: swaymsg -t get_outputs
 output eDP-1 res 2736x1824 scale 1
+
+### Auto start 
+exec mako
+# exec        --no-startup-id fcitx5 -d
+ exec fcitx5 -d
+
 
 ## Idle configuration
 # this will lock your screen after 300 seconds of inactivity, then turn off
@@ -106,9 +110,9 @@ bindsym $mod+Shift+$right move right
 #set $ws7 "7"
 #set $ws8 "8"
 
-set $ws1 "1: workspace"
-set $ws2 "2: apps"
-set $ws3 "3"
+set $ws1 "1: WORK"
+set $ws2 "2: WEBS"
+set $ws3 "3: APPS"
 set $ws5 "4"
 set $ws6 "5"
 set $ws7 "6"
@@ -158,10 +162,12 @@ bindsym $mod+Shift+0 move container to workspace number $ws10, workspace $ws10
 #assign [class="icalingua"] number "3: apps"
 #assign [class="marktext"] number "4: workspace"
 #assign [instance="qq.exe"] number "5: stereotype"
-assign [class="marktext"] number "1: workspace"
-assign [class="TelegramDesktop"] number "2: apps"
-assign [class="icalingua"] number "2: apps"
-assign [class="yesplaymusic"] number "2: apps"
+assign [class="marktext"] number "1: WORK"
+assign [app_id="org.telegram.desktop"] number "2: APPS"
+assign [class="icalingua"] number "2: APPS"
+assign [class="Feishu"] number "2: APPS"
+assign [class="yesplaymusic"] number "2: APPS"
+assign [class="QQ"] number "2: APPS"
 
 ## Always float some windows
 for_window [window_role="pop-up"]                     floating enable
@@ -273,6 +279,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@
 
+## screen capture
+bindsym $mod+Shift+s exec grim -g "$(slurp)" - | swappy -f -
 ###############################
 ###      Status Bar         ###
 ###############################
