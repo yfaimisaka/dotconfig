@@ -26,8 +26,8 @@ if not status_ok then
 end
 
 return packer.startup(function(use)
-    use("wbthomason/packer.nvim")
-
+    use("wbthomason/packer.nvim") 
+    
     -- preferred colorscheme
     use("bluz71/vim-nightfly-guicolors") 
     use("lunarvim/darkplus.nvim")
@@ -96,8 +96,8 @@ return packer.startup(function(use)
               definition_action_keys = {
                 edit = "<CR>",
               },
-            })
-        end,
+        })
+        end
     }) -- enhanced lsp uis
 
     use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
@@ -121,11 +121,6 @@ return packer.startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
 
-    -- fcitx5 state restorer
-    use 'h-hg/fcitx.nvim'
-
-    -- rst preview(vim use :( )
-    -- use 'Rykka/InstantRst'
 
     if packer_bootstrap then
         require("packer").sync()

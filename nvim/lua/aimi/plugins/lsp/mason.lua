@@ -14,6 +14,7 @@ local servers = {
     "bashls",
     "jsonls",
     "yamlls",
+    "rnix",
 }
 
 -- settings for mason

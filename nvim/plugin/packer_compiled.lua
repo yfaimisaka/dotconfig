@@ -109,11 +109,6 @@ _G.packer_plugins = {
     path = "/home/aimi/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
     url = "https://github.com/lunarvim/darkplus.nvim"
   },
-  ["fcitx.nvim"] = {
-    loaded = true,
-    path = "/home/aimi/.local/share/nvim/site/pack/packer/start/fcitx.nvim",
-    url = "https://github.com/h-hg/fcitx.nvim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/aimi/.local/share/nvim/site/pack/packer/start/friendly-snippets",

@@ -1,7 +1,7 @@
-local opt = vim.opt
+local opt = vim.opt 
 
 -- line numbers
-opt.relativenumber = true
+opt.relativenumber = true 
 opt.number = true
 
 -- tabs & indent
@@ -9,7 +9,6 @@ opt.tabstop = 4
 opt.shiftwidth = 4
 opt.expandtab = true
 opt.autoindent = true
-opt.smartindent = true
 
 -- line wrapping
 opt.wrap = false
